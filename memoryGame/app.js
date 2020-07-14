@@ -111,7 +111,6 @@ cardArray.sort(() => 0.5 - Math.random());
 const grid = document.querySelector('.grid')
 const resultDisplay = document.querySelector('#result')
 
-
 var cardsChosen = []
 var cardsChosenId = []
 var cardsWon = []
@@ -123,6 +122,7 @@ function createBoard() {
         card.setAttribute('data-id', i)
         card.addEventListener('click',flipcard)
         grid.appendChild(card)
+        
     }
  }
 
@@ -130,7 +130,7 @@ function checkForMAtch() {
     var cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
-    if (cardsChosen[0] === cardsChosen[1]){
+    if (cardsChosen[0] === cardsChosen[1] && optionOneId !== optionTwoId){
         alert('You found a match')
         cards[optionOneId].setAttribute('src', 'images/white.png')
         cards[optionTwoId].setAttribute('src', 'images/white.png')

@@ -1,6 +1,6 @@
 # Memory Game - Level 1
 
-Learn:  
+주요 메서드:    
 - push() 
 - querySelector()   
 - SetAttribute()    
