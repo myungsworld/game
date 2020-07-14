@@ -1,60 +1,3 @@
-// const DOMContentLoaded = document.addEventListener('DOMContentLoaded', ()=>{
-
-//     //card options
-//     const cardArray = [
-//         {
-//             name:'hotdog',
-//             img : 'imges/hotdog.png'
-//         },
-//         {
-//             name:'hotdog',
-//             img : 'imges/hotdog.png'
-//         },
-//         {
-//             name:'hotdog2',
-//             img : 'imges/hotdog2.png'
-//         },
-//         {
-//             name:'hotdog2',
-//             img : 'imges/hotdog2.png'
-//         },
-//         {
-//             name:'hotdog3',
-//             img : 'imges/hotdog3.png'
-//         },
-//         {
-//             name:'hotdog3',
-//             img : 'imges/hotdog3.png'
-//         },
-//         {
-//             name:'hotdog4',
-//             img : 'imges/hotdog4.png'
-//         },
-//         {
-//             name:'hotdog4',
-//             img : 'imges/hotdog4.png'
-//         },
-//         {
-//             name:'hotdog5',
-//             img : 'imges/hotdog5.png'
-//         },
-//         {
-//             name:'hotdog5',
-//             img : 'imges/hotdog5.png'
-//         },
-//         {
-//             name:'hotdog6',
-//             img : 'imges/hotdog6.png'
-//         },
-//         {
-//             name:'hotdog6',
-//             img : 'imges/hotdog6.png'
-//         }
-//     ]
-//  });
-
-
-
 const cardArray = [
     {
         name:'hotdog',
@@ -110,7 +53,8 @@ cardArray.sort(() => 0.5 - Math.random());
 
 const grid = document.querySelector('.grid')
 const resultDisplay = document.querySelector('#result')
-
+let leftTime = document.querySelector('#currentTime')
+let currentTime = 0
 var cardsChosen = []
 var cardsChosenId = []
 var cardsWon = []
@@ -144,7 +88,7 @@ function checkForMAtch() {
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
     if(cardsWon.length === cardArray.length/2){
-        resultDisplay.textContent ='Congratulations! You found them all!'
+        resultDisplay.textContent =`Congratulations! You found them all! It's taken ${leftTime.textContent} seconds`
     }
 }
 
@@ -159,3 +103,10 @@ function flipcard(){
  }
 
 createBoard();
+
+function time(){
+    currentTime++
+    leftTime.textContent = currentTime
+}
+
+let Timer = setInterval(time,1000)
