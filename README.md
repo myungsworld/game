@@ -24,4 +24,15 @@
 - classList  
 - Arrow functions  
 
-2020/07
+2020/07/15 난이도 악몽으로 바꿈
+
+# Connet Four - Level 1
+
+주요 메서드:  
+- querySelector()  
+- addEventListener()  
+- onclick  
+- classList.contains()  
+- classList.add()  
+- For loops  
+- Arrow functions  
