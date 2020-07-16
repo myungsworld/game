@@ -36,3 +36,5 @@
 - classList.add()  
 - For loops  
 - Arrow functions  
+
+2020/07/16 function(index) 
