@@ -37,4 +37,4 @@
 - For loops  
 - Arrow functions  
 
-2020/07/16 function(index) 
+2020/07/16 function(index) 안됨
